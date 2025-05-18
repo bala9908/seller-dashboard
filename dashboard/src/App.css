@@ -1,0 +1,351 @@
+body{
+    margin: 0px;
+    height: 100vh;
+    font-family: "Roboto";
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  input{
+    opacity: 0.5;
+    color: black;
+  }
+  select{
+    opacity: 0.5;
+  }
+.Navbar{
+    
+    max-width: 120%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    padding-bottom: 10px;
+    position: sticky;
+    z-index: 100;
+}
+
+.slidebar {
+    width: 240px; /* fixed width or any % like 20% */
+    min-height: 100vh;
+    background-color: gray;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+  .slidebar ul li:hover{
+    color: white;
+  }
+.slidebar ul li{
+    list-style: none;
+    margin-bottom: 25px;
+    padding: 15px;
+}
+
+/* .main-layout {
+    display: flex;
+    width: 100vw;
+    height: 85vh; 
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+  } */
+
+
+  .main-layout {
+    display: flex;
+    width: 100vw;
+    height: auto; /* Let it grow based on content */
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+
+
+.login-form{
+    border: 1px solid rgb(22, 22, 22);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto
+}
+
+.register-form{
+    border: 1px solid black(10, 10, 10);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registerlabel{
+    color: rgb(252, 250, 249);
+}
+
+.form-box {
+    border: 1px solid rgb(10, 10, 10);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    
+  
+    background-image: url("https://img.freepik.com/free-photo/top-view-table-full-food_23-2149209253.jpg?t=st=1746356785~exp=1746360385~hmac=532e6b6162806d688601cec2f5fad695ce78587d97b12c21bbbdf6b4fed0c658&w=1380");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+  }
+
+
+  .addresturant-form-box {
+    border: 1px solid rgb(10, 10, 10);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    
+  
+    background-image: url("https://img.freepik.com/premium-photo/nighttime-cafe-broadway_1174561-23.jpg?w=1380");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+  }
+  .login-form-box{
+    border: 1px solid rgb(10, 10, 10);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+  
+    background-image: url("https://img.freepik.com/free-photo/red-lentil-soup-with-slice-lemon-breadcrumbs_140725-1001.jpg?t=st=1746357536~exp=1746361136~hmac=c2fa3160af00ef42ade09b13f3b448b2641a66f66fc39dd3a80fdfbc50820c62&w=740");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+  }
+
+
+
+
+.login-form input label{
+    height: 20px;
+    border-radius: 5px;
+    width: 100%;
+}
+.margin{
+    margin-bottom: 10px;
+}
+input{
+    width: 80%;
+    padding: 8px;
+    border-radius: 20px;
+    border: 0px;
+}
+/* .authform{
+   
+    padding: 25px;
+    width: 50%;
+    box-shadow: 10px 10px 50px 10px ;
+
+   
+
+} */
+
+.authform {
+    padding: 20px;
+    width: 100%;
+    max-width: 500px; /* Increased width to better fit the form */
+    box-shadow: 10px 10px 50px 10px;
+    margin-top: 20px; /* Space between the navbar and the form */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Background with some opacity for better contrast */
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+/* .container{
+ display: flex;
+   
+} */
+.login-btn{
+    margin-top: 10px;
+    background-color: rgb(101, 225, 101);
+    border-radius: 15px;
+    height: 30px;
+    width: 80px;
+    color: white;
+    border: 0cap;
+
+}
+    .image-container{
+        display: flex;
+        justify-content: center;
+        border-radius: 50%;
+        
+    }
+    .user-image{
+        width: 110px; /* or any size you prefer */
+        height: 100px;
+        opacity: 1 ;
+        border-radius: 50%;
+    }
+    .heading{
+        color: white;
+    }
+
+    .resturantcheckbox{
+        display: flex;
+    }
+    .selectoption{
+        width: 75%;
+        padding: 8px;
+    }
+
+    .resturanttype{
+        font-size: 15px;
+    }
+
+    .margin{
+        margin-left: 15px;
+    }
+
+.close{
+    display: flex;
+    justify-content: flex-end;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+ 
+.login-form:hover .close{
+    visibility: visible;
+    opacity: 1;
+}
+.bestseller{
+    display: flex;
+}
+.dishregion{
+    display: flex;
+}
+
+.img{
+    width: 150px;
+    height: 150px;
+}
+
+.h1{
+    font-size: 15px;
+}
+
+
+.userdetailspage{
+    min-height: 100vh;
+    background-color: orange;
+    max-width: 20%;
+}
+
+.userdetailspage h2{
+    font-size: 20px;
+}
+.userdetails-2{
+    border: 1px solid red;
+    min-width: 70%;
+}
+
+
+
+.container-1 {
+  min-width: 120px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* .gallery {
+  display: grid;
+ gap: 5px;
+  
+  grid-template-columns: auto auto auto;
+  margin: 15px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+  min-width: 150%;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.card h2 {
+  padding: 15px;
+  font-size: 1.2rem;
+  color: #333;
+} */
+
+.card{
+    width: 250px;
+    height: 250px;
+    border: 1px solid red;
+    background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+  text-align: center
+    
+}
+.resturant-image{
+    width: 200px;
+    height: 150px;
+    align-self: center;
+    margin: 10px;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    flex-wrap: wrap;
+    grid-area: auto;
+    margin: 50px;
+    overflow-x: scroll;
+    
+}
+.container-2{
+    max-width: 60%;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 10px;
+}
+
+
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f37c14; 
+}
