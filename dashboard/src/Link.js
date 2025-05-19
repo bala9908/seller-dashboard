@@ -1,0 +1,1 @@
+export let url="https://backend-swiggy-cmi3.onrender.com"

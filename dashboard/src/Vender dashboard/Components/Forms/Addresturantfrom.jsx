@@ -2,6 +2,7 @@ import React, { useState,useEffect, use } from 'react';
 import Select from 'react-select';
 import axios from 'axios'
 import { Form } from 'react-bootstrap';
+import { url } from '../../../Link';
 function Addresturantfrom() {
 
   let [citiesdata,setcitiesdata]=useState([])
@@ -97,7 +98,7 @@ useEffect(()=>{console.log(resturanttype)},[resturanttype])
 
 
 
-    let response=await fetch("http://localhost:5018/resturant/addresturant",{method:"POST",headers:{
+    let response=await fetch(`${url}/resturant/addresturant`,{method:"POST",headers:{
       "Authorization":`Bearer ${token}`},
       body:formData
     })

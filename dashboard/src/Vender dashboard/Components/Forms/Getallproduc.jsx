@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { url } from '../../../Link';
 
 function Getallproduc() {
 
@@ -16,10 +16,10 @@ function Getallproduc() {
     console.log(product._id,product.resturant[0])
     try {
 
-      let response=await fetch(`http://localhost:5018/providerresturant/${product.resturant[0]}/delete/${product._id}`,{method:"DELETE"})
+      let response=await fetch(`${url}/providerresturant/${product.resturant[0]}/delete/${product._id}`,{method:"DELETE"})
       if(response.ok){
         
-        let response =await fetch(`http://localhost:5018/providerresturant/get/${sellerid}`)
+        let response =await fetch(`${url}/providerresturant/get/${sellerid}`)
     let data=await response.json()
     console.log(response)
     if(response.ok){
@@ -74,7 +74,7 @@ function Getallproduc() {
   useEffect(()=>{
     let getproducts=async ()=>{
    try {
-     let response =await fetch(`http://localhost:5018/providerresturant/get/${sellerid}`)
+     let response =await fetch(`${url}/providerresturant/get/${sellerid}`)
     let data=await response.json()
     console.log(response)
     if(response.ok){
@@ -125,7 +125,7 @@ function Getallproduc() {
             <div className="border p-2 h-100">
               <div>
                 <img
-                  src={`http://localhost:5018/uploads/${product.image}`}
+                  src={`${url}/uploads/${product.image}`}
                   className="img m-2"
                   alt="idly"
                 />

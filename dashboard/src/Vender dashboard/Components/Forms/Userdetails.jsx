@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { url } from '../../../Link';
 
 function Userdetails() {
 
@@ -15,7 +15,7 @@ function Userdetails() {
 
   useEffect(()=>{
     let getdetails=async ()=>{
-        let response=await fetch(`http://localhost:5018/provider/single-vendor/${sellerid}`,{method:"GET"})
+        let response=await fetch(`${url}/provider/single-vendor/${sellerid}`,{method:"GET"})
         let data=await response.json()
         if(response.ok){
             console.log(data)
@@ -64,7 +64,7 @@ function Userdetails() {
           return(
             <>
              <div className="card">
-        <img src={`http://localhost:5018/uploads/${resturant.image}`} alt="Restaurant 1" className='resturant-image'/>
+        <img src={`${url}/uploads/${resturant.image}`} alt="Restaurant 1" className='resturant-image'/>
         <h2>{resturant.resturantname}</h2>
       </div>
             </>

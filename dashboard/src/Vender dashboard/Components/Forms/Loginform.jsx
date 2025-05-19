@@ -1,5 +1,6 @@
 import React, { use } from 'react'
 import { useState } from 'react';
+import { url } from '../../../Link';
 function Loginform({logout,setlogout}) {
   let [useremail,setuseremail]=useState("")
   let [password,setpassword]=useState("")
@@ -7,7 +8,7 @@ function Loginform({logout,setlogout}) {
   let handleform=async (e) => {
     e.preventDefault()
     try {
-      let response=await fetch('http://localhost:5018/provider/login',{method:"POST",headers:{
+      let response=await fetch(`${url}/provider/login`,{method:"POST",headers:{
         "Content-Type":"application/json"
       },
       body:JSON.stringify({useremail,password})

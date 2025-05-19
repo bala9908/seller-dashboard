@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useState } from 'react'
 import {redirect, useNavigate} from 'react-router'
 import Loginform from './Loginform'
+import { url } from '../../../Link'
 function Registerform({setLoginHandler}) {
   let[user,setuser]=useState({username:"",useremail:"",password:"",image:""})
   let [error,seterror]=useState("")
@@ -37,7 +38,7 @@ function Registerform({setLoginHandler}) {
     formData.append("password",user.password);
     formData.append("image",user.image)
     try {
-      let response=await fetch("http://localhost:5018/provider/register",{method:"POST",
+      let response=await fetch(`${url}/provider/register`,{method:"POST",
       body:formData
     })
     let data= await response.json()

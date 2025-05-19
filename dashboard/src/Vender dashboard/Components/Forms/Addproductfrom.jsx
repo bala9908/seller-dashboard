@@ -1,7 +1,7 @@
 
 import { useState ,useEffect} from "react"
 import React from 'react'
-
+import { url } from "../../../Link"
 function Addproductfrom() {
   let [dishname,setdishname]=useState("")
   let [dishtype,setdishtype]=useState("")
@@ -19,7 +19,7 @@ function Addproductfrom() {
   useEffect(()=>{
     let getresturantfromsellers=async () => {
     try {
-      let responsefromseller=await fetch(`http://localhost:5018/provider/single-vendor/${sellerid}`)
+      let responsefromseller=await fetch(`${url}/provider/single-vendor/${sellerid}`)
       let data=await responsefromseller.json()
       console.log(data)
       if(responsefromseller.ok){
@@ -88,7 +88,7 @@ useEffect(()=>{
 
 
 
-     let response=await fetch(`http://localhost:5018/providerresturant/addproduct/${resturant}`,{method:"POST",headers:{
+     let response=await fetch(`${url}/providerresturant/addproduct/${resturant}`,{method:"POST",headers:{
       "Authorization":`Bearer ${token}`
      },
       // body:JSON.stringify({dishname,dishregion,price,bestseller,dishtype,image,description})
